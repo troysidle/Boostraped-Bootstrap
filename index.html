@@ -1,12 +1,12 @@
 <!--*********************************************************************
 Author: Troy Sidle
 
-Version: 1.1
+Version: 1.1.1
 This is a simple page using Bootstrap.
 
 This version has a home image as a background with text.
 
-This scales well on a mobile device.
+This scales well on a mobile device. It has a menu that is hidden, but can be displayed with a menu botton.
 *********************************************************************-->
 
 
@@ -17,7 +17,7 @@ This scales well on a mobile device.
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <!-- my custom stylesheet -->
+  <!-- my stylesheet -->
   <link href="Stylesheet.css" rel="stylesheet">
 
   <!--This points to a library, rather than hosting Bootstrap locally.-->
@@ -26,32 +26,55 @@ This scales well on a mobile device.
 </head>
 <body>
 
+    
+<!-- ======= Mobile nav toggle button ======= -->
+<i class="bi bi-list mobile-nav-toggle d-xl-none"></i>    
+    
+<!-- Header  -->
+  <header id="header">
+    <div class="d-flex flex-column">
+      
+      <div class="profile">
+        <img src="assets/img/TroySidlePortrait.png" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html">Troy Sidle</a></h1>
+        
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+    
+    </div>
+  </header><!-- End Header -->
 
     
 <!-- home -->    
 
  <section id="home" class="justify-content-center">
     
-<!-- main profile image -->
+<!-- profile image -->
     
 <div class="heroImage">
         
-<!-- main profile text -->
+<!-- profile text -->
     
-<div class="heroText">
+    <div class="heroText">
     
-    <h1>Troy Sidle</h1>
-    <h2>Web Developer</h2>
+        <h1>Troy Sidle</h1>
+        <h2>Web Developer</h2>
     
-</div>
+    </div>
     
-
     
-</div> <!-- end main profile image -->
+</div> <!-- end profile image -->
 
 </section> <!-- end home -->
     
-    
+<main id="main">    
     
     
     
@@ -90,6 +113,11 @@ This scales well on a mobile device.
     </div>
   </div>
 </div>
+</main>
+    
 
+<script src="main.js"></script>
+
+    
 </body>
 </html>
