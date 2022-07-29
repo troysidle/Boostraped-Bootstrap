@@ -1,31 +1,31 @@
-/* This is code adopted from BootstrapMade.com.
-
-I don't know exactly the functionality of all this code, especially the "e.addEventListener" line*/
+/* This is edited code adopted from BootstrapMade.com. */
 
 
 (function () {"use strict"; /*all variables must be declared*/
 
               
   /* Easy selector helper function defines select */
+  /* This function seems to indicate which elements have classes that have been selected. */
     
- const select = (el, all = false) => 
+ const select = function (elements, all = false)
  {
-    el = el.trim() /*trim white space from a string*/
+    elements = elements.trim() /*trim white space from a string*/
     if (all) {
-      return [...document.querySelectorAll(el)]
+      return [...document.querySelectorAll(elements)]
     } else {
-      return document.querySelector(el)
+      return document.querySelector(elements)
     }
   }
 
-  /* Easy event listener function defines the on function*/
-  
-  const on = (type, el, listener, all = false) => 
+  /* Easy event listener function defines the on function */
+  /* This function seems to indicate which elements have classes that are activated. */
+ 
+  const on = function (type, elements, listener, all = false) 
   {
-    let selectElement = select(el, all)
+    let selectElement = select (elements, all)
     if (selectElement) {
       if (all) {
-        selectElement.forEach(e => e.addEventListener(type, listener)) /*parse an array*/
+        selectElement.forEach(eventAction => eventAction.addEventListener(type, listener)) /*parse an array*/
       } else {
         selectElement.addEventListener(type, listener)
       }
@@ -34,8 +34,9 @@ I don't know exactly the functionality of all this code, especially the "e.addEv
 
 
   /* Mobile nav toggle */
+  /* Using the select and on, toggle elements as needed. */
   
-  on('click', '.mobile-nav-toggle', function(e) {
+  on('click', '.mobile-nav-toggle', function(eventAction) {
     select('body').classList.toggle('mobile-nav-active') /*toggle the class to show the navigation menu*/
     this.classList.toggle('bi-list') /*toggle the class to show the menu (list) icon*/
     this.classList.toggle('bi-x') /*toggle the class to show the X icon*/
