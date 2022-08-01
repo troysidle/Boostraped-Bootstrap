@@ -1,3 +1,18 @@
+
+
+/* Font called by Google API */
+
+/* need to determine how to make bold */
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+
+
+
 /*
 create a background image so that text can be placed on top.
 */   
@@ -38,7 +53,7 @@ create a background image so that text can be placed on top.
 }
 
 #body {
-    left: 212px;
+    left: 212px;  
 }
 
 #main {
@@ -112,9 +127,41 @@ create a background image so that text can be placed on top.
   left: 0;
 }
 
+/* for displaying the books in Porfolio */
 
+.imageContainer{
+  height: auto;
+  width: 350px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 45px;
+}
 
-/*This seems to control the navigation menu upon resizing*/
+.imageContainer:hover .overlay {
+  opacity: 1;
+}
+.overlay {
+  position: absolute; 
+  top: 30px; 
+  background: none;
+  background: rgba(0, 0, 0, 0); /* see-through */
+  color: #f1f1f1; 
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 0px;
+  text-align: center;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*This controls the navigation menu upon resizing*/
 
 @media (max-width: 1030px) {
   #header {
