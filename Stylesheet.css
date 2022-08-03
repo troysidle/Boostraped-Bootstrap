@@ -27,9 +27,9 @@ create a background image so that text can be placed on top.
 }
 
 .heroText {
-  text-align: left;
+  text-align: right;
   position: absolute;
-  top: 45%;
+  top: 75%;
   left: 30%;
   transform: translate(-50%, -50%);
 }
@@ -43,21 +43,24 @@ create a background image so that text can be placed on top.
   top: 0;
   left: 0;
   bottom: 0;
-  width: 212px;
+  width: 250px;
   transition: all ease-in-out 0.25s;
   z-index: 9997;
   transition: all 0.5s;
   padding: 0 15px;
   background: black;
   overflow-y: auto;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  line-height: 0.7; /*distance between navigation menu options*/
 }
 
 #body {
-    left: 212px;  
+    left: 250px;  
 }
 
 #main {
-  margin-left: 212px;
+  margin-left: 250px;
 }
 
 /*--------------------------------------------------------------
@@ -83,7 +86,7 @@ create a background image so that text can be placed on top.
   padding: 12px 15px;
   margin-bottom: 8px;
   transition: 0.3s;
-  font-size: 15px;
+  font-size: 24px;
 }
 .nav-menu a i, .nav-menu a:focus i {
   font-size: 24px;
