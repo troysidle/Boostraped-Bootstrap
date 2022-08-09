@@ -275,6 +275,61 @@ create a background image so that text can be placed on top.
   left: 0;
 }
 
+/* Social Media Links */
+
+#socialMediaLinks
+{
+  position: absolute;
+  top: 550px;
+  right: 350px;
+  z-index: 2;
+}
+
+.socialMediaIcon{
+  height: auto;
+  width: 35px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 10px;
+  margin: 20px;
+}
+
+.XsocialMediaIcons {
+  width: 500px;
+  height: auto;
+  margin: 5px;
+  padding: 3px;
+  background: var(--white); 
+  outline: 1.3px solid grey;
+  position: absolute;
+  top: 650px;
+  right: 365px;
+  z-index: 9998;
+  transition: all 1.0s; /*is this working or needed?*/
+  cursor: pointer;
+
+    /*
+  height: auto;
+  width: 350px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 45px;
+    */
+}
+
+
+
+
+
+
+
+
+
+
 /* for displaying the books in Porfolio */
 
 .imageContainer{

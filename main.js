@@ -55,5 +55,15 @@
     this.classList.toggle('bi-list') /*toggle the class to show the menu (list) icon*/
     this.classList.toggle('bi-x') /*toggle the class to show the X icon*/
   })
+              
+              
+/*toggle off the sliding navigation bar when user clicks outside of it*/
+ /*in process*/
+              
+// Get the modal
+
+
+
+  
 
 })()
