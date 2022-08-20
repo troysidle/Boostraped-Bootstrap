@@ -4,6 +4,10 @@
 
 
 :root {
+
+  --navigationBarWidth: 250px;    
+    
+    
   --white: #ffffff;
   --nearwhite: #f3f3f3;
   --nearBlackTone: #434343;
@@ -11,7 +15,7 @@
   --mediumtone: #8e9c88;
   --darkTone: #434343;
     
-    /* Monochrome Green
+/* Monochrome Green
     These colors are monochrome in a green hue.
 */
 
@@ -192,7 +196,7 @@ create a background image so that text can be placed on top.
   top: 0;
   left: 0;
   bottom: 0;
-  width: 250px;
+  width: var(--navigationBarWidth);
   transition: all ease-in-out 0.25s;
   z-index: 9997;
   transition: all 0.5s;
@@ -204,12 +208,17 @@ create a background image so that text can be placed on top.
   line-height: 0.7; /*distance between navigation menu options*/
 }
 
+/* for the the area outside the navigation bar */
+#clickOffNavigationBar {
+  display: none;
+}
+
 #body {
-    left: 250px;  
+    left: var(--navigationBarWidth);  
 }
 
 #main {
-  margin-left: 250px;
+  margin-left: var(--navigationBarWidth);
 }
 
 /*--------------------------------------------------------------
@@ -251,12 +260,17 @@ create a background image so that text can be placed on top.
 }
 
 /* Mobile Navigation */
-.mobile-nav-toggle {
+.mobileNavigationToggleButton {
   position: fixed;
-  top: 55px;
-  right: 35px;
-  z-index: 9998;
-  transition: all 1.0s; /*is this working or needed?*/
+  right: 15px;
+  top: 15px;
+  z-index: 100;
+  z-index: 10;
+  border: 0;  
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
   cursor: pointer;
 }
 
@@ -268,32 +282,79 @@ create a background image so that text can be placed on top.
   background: var(--darkTone); 
   outline: 1.3px solid grey;}
 
+/* Mobile Navigation */
+.hideMenuArea {
+  position: fixed;
+  left: var(--navigationBarWidth);
+  top: 0;
+  z-index: 9998;
+  border: 0;
+  background-color: #aaaaaaee; /* change this to #aaaaaaee to see the effect */
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  cursor: pointer;
+}
+
+
+
+/* hide the scroll bar */
 .mobile-nav-active {
   overflow: hidden;
 }
+
+/* show the mobile navigation menu */
 .mobile-nav-active #header {
-  left: 0;
+  left: 0px;
+}
+
+/* show the mobile navigation menu */
+.mobile-nav-active #clickOffNavigationBar {
+  display: block;
 }
 
 /* Social Media Links */
 
+
+.socialMediaLinksContainer{
+    position: absolute;
+    top: 600px;
+    right: 30px;
+    height: 80px;
+    background-color: grey;
+    z-index: 1000;
+
+}
+
+.socialMediaLinksContainer2{
+    position: relative;
+    height: 70px;
+    background-color: black;
+    z-index: 1001;
+
+    }
+
 #socialMediaLinks
 {
   position: absolute;
-  top: 550px;
-  right: 350px;
+  left: 15px;
   z-index: 2;
+
 }
 
 .socialMediaIcon{
   height: auto;
-  width: 35px;
+  width: 50px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   padding: 10px;
-  margin: 20px;
+  margin: 2px;
 }
 
 .XsocialMediaIcons {
@@ -335,28 +396,31 @@ create a background image so that text can be placed on top.
 .imageContainer{
   height: auto;
   width: 350px;
-  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   padding: 45px;
+
 }
 
 .imageContainer:hover .overlay {
   opacity: 1;
+
 }
 .overlay {
   position: absolute; 
-  top: 30px; 
+  top: 35px;
+  right: 95px;
   background: none;
   background: rgba(0, 0, 0, 0); /* see-through */
   color: #f1f1f1; 
-  transition: .5s ease;
+  transition: 1s ease;
   opacity:0;
   color: white;
   font-size: 20px;
   padding: 0px;
   text-align: center;
+
 }
 
 .flex-container {
@@ -379,7 +443,7 @@ create a background image so that text can be placed on top.
 /* Footer */
 
 .footer {
-  margin-left: 250px; /* Same as the width of the sidenav */
+  margin-left: var(--navigationBarWidth); /* Same as the width of the sidenav */
   padding: 0px 180px;
   background-color: var(--darkColor);
 }
