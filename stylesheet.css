@@ -169,6 +169,13 @@ create a background image so that text can be placed on top.
   filter: grayscale(100%);
 }
 
+.heroImage:hover {
+   background-image: url("VibrantHudsonBackground.jpg"); 
+   background: clear;
+    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+}
+
 .heroText {
   text-align: right;
   position: absolute;
@@ -337,7 +344,7 @@ create a background image so that text can be placed on top.
   top: 0;
   z-index: 9998;
   border: 0;
-  background-color: #aaaaaaee; /* change this to #aaaaaaee to see the effect */
+  background-color: clear; /* change this to #aaaaaaee to see the effect */
   color: #fff;
   width: 100%;
   height: 100%;
@@ -443,11 +450,11 @@ create a background image so that text can be placed on top.
 
 .imageContainer{
   height: auto;
-  width: 300px;
+  width: auto;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  padding: 25px;
+  background: blue;
 
 }
 
@@ -457,16 +464,14 @@ create a background image so that text can be placed on top.
 }
 .overlay {
   position: absolute; 
-  top: 24px;
-  left: 50px;
-  background: none;
-  background: rgba(0, 0, 0, 0); /* see-through */
+  top: 0px;
+  left: 0px;
+  background: clear; /* see-through */
   color: #f1f1f1; 
   transition: .125s ease;
   opacity:0;
   color: white;
   font-size: 20px;
-  padding: 0px;
   text-align: center;
 
 }
