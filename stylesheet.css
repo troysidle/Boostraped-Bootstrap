@@ -216,11 +216,22 @@ create a background image so that text can be placed on top.
 .underConstruction {
   text-align: left;
   position: absolute;
-  top: 10%;
+  top: 20%;
   left: 40%;
   transform: translate(-50%, -50%);
+  max-width: 300px;
+  background-color: #C1F5C699;
 }
 
+.cookiesNoticeWindow {
+  text-align: left;
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  max-width: 300px;
+  background-color: #C1F5C6;
+}
 
 
 
@@ -489,12 +500,12 @@ create a background image so that text can be placed on top.
 
 }
 
-.cookiesBarTest{
+.designBar {
     position: absolute;
     top: 635px;
-    height: 40px;
     z-index: 10000;
     background-color: var(--baseColor);
+    min-height: 42px;
 }
 
 

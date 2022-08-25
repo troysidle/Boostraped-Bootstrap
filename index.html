@@ -1,7 +1,7 @@
 <!--*********************************************************************
 Author: Troy Sidle
 
-Version: 1.2.1
+Version: 1.2.2
 This page uses Bootstrap.
 
 This version has a home image as a background with text.
@@ -24,7 +24,7 @@ Favicon created and added. New color feature on Hero image.
 
 Social Media buttons are now working.
 
-Cookies are implimented and a user cookie notice is added.
+Cookies are implemented and a user cookie notice is added. Slight adjustments for mobile.
 
 *********************************************************************-->
 
@@ -89,18 +89,18 @@ Cookies are implimented and a user cookie notice is added.
 <div class="d-flex position-sticky cookiesBar top-50 start-0 translate-start"></div>
     -->
   
-<!--for testing-->
-<div class="container-fluid cookiesBarTest">
+<!-- Full Length Design Bar-->
+<div class="container-fluid designBar">
     
 <!-- Cookies Notice -->
-<div id="cookieNotice" class="text-end" style="display: none;">
-  <div class="d-flex p-1 justify-content-end align-items-center">
-      <div class="p-1">
-      This site uses cookies to store your preferences.
-          </div>
-                <div class="acceptCookiesButton text-center" onclick="acceptCookieConsent();">Got it.</div>
+<!--<div id="cookieNotice" class="text-end" style="display: none;">-->
+  <div class="d-flex">
+      <!--<div class="p-1"><!--<p class="fs-6">
+      This site uses cookies to store your preferences.</p>
+          </div>-->
+                <!--<div class="acceptCookiesButton text-center" onclick="acceptCookieConsent();">Got it.</div>-->
     </div>
-</div>
+<!--</div>-->
     
 
   
@@ -232,11 +232,28 @@ Cookies are implimented and a user cookie notice is added.
         
     <!-- under construction notice -->
     
-    <div class="underConstruction">
+    <div class="underConstruction p-3 text-center">
     HoneydewLimeade is under construction.
     <br>
+    <br>
     Follow along with the process on <a style="color: var(--contrastColor)" href="http://medium.com/@troysidle">Medium</a>.
+<!--<div class="p-1"><p class="fs-6">
+        This site uses cookies to store your preferences.</p>
+        </div>
+        <div class="acceptCookiesButton text-center" onclick="acceptCookieConsent();">Got it.</div>-->
     </div>
+    
+    <!-- Cookies Notice -->
+    <div id="cookieNotice" style="display: none;" class="cookiesNoticeWindow p-3">
+        <div class="p-1 justify-content-center align-items-center">
+        <div class="p-1"><p class="fs-6">
+        This site uses cookies to store your preferences.</p>
+        </div >
+        <div class="acceptCookiesButton text-center" onclick="acceptCookieConsent();">Got it.</div>
+        </div>
+    </div>
+    
+    
     
 
     
