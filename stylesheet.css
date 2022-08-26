@@ -217,7 +217,7 @@ create a background image so that text can be placed on top.
   text-align: left;
   position: absolute;
   top: 20%;
-  left: 40%;
+  left: 30%;
   transform: translate(-50%, -50%);
   max-width: 300px;
   background-color: #C1F5C699;
@@ -227,7 +227,7 @@ create a background image so that text can be placed on top.
   text-align: left;
   position: absolute;
   top: 20%;
-  left: 40%;
+  left: 30%;
   transform: translate(-50%, -50%);
   max-width: 300px;
   background-color: #C1F5C6;
